@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="list">
+      <h4>Listagem Usuários</h4>
+      <ul class="student-list">
+        <li
+          *ngFor="let aluno of alunos; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveAluno(aluno, i)"
+        >
+          {{ aluno.nome }}
+        </li>
+      </ul>
+    </div>
+    <div class="current-student">
+      <div *ngIf="currentAluno">
+        <h4>Aluno</h4>
+        <div>
+          <label><strong>Nome:</strong></label> {{ currentAluno.nome }}
+        </div>
+        <div>
+          <label><strong>CPF:</strong></label>
+          {{ currentAluno.cpf }}
+        </div>
+        <div>
+          <label><strong>Privilegio:</strong></label>
+          {{ currentAluno.privilegio }}
+        </div>
+      </div>
+
+      <div *ngIf="!currentAluno">
+        <br />
+        <p>Clique em um usuário...</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="list">
+    <h4>Listagem Produtos</h4>
+    <ul class="student-list">
+      <li
+        *ngFor="let aluno of produtos; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveAluno(aluno, i)"
+      >
+        {{ aluno.nome }}
+      </li>
+    </ul>
+  </div>
+  <div class="current-student">
+    <div *ngIf="currentAluno">
+      <h4>Produto</h4>
+      <div>
+        <label><strong>Nome:</strong></label> {{ currentAluno.nome }}
+      </div>
+      <div>
+        <label><strong>Tempo de colheita:</strong></label>
+        {{ currentAluno.tempo_colheita }}
+      </div>
+      <div>
+        <label><strong>Época:</strong></label>
+        {{ currentAluno.epoca }}
+      </div>
+    </div>
+
+    <div *ngIf="!currentAluno">
+      <br />
+      <p>Clique em um aluno...</p>
+    </div>
+  </div>
+</div>
