@@ -3,11 +3,11 @@ import { EscolaService } from 'src/app/services/escola.service';
 
 
 @Component({
-  selector: 'app-add-aluno',
-  templateUrl: './add-aluno.component.html',
-  styleUrls: ['./add-aluno.component.css']
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
 })
-export class AddAlunoComponent implements OnInit {
+export class AddUserComponent implements OnInit {
 
   baseUrl = 'http://localhost:8080/api/tutorials';
   aluno = {

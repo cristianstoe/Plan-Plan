@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlunosListComponent } from './alunos-list.component';
+import { AlunosEditComponent } from './user-edit.component';
 
-describe('AlunosListComponent', () => {
-  let component: AlunosListComponent;
-  let fixture: ComponentFixture<AlunosListComponent>;
+describe('AlunosEditComponent', () => {
+  let component: AlunosEditComponent;
+  let fixture: ComponentFixture<AlunosEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlunosListComponent ]
+      declarations: [ AlunosEditComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlunosListComponent);
+    fixture = TestBed.createComponent(AlunosEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

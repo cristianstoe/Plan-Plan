@@ -5,19 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddAlunoComponent } from './components/add-aluno/add-aluno.component';
-import { AlunosListComponent } from './components/alunos-list/alunos-list.component';
-import { AlunosEditComponent } from './components/alunos-edit/alunos-edit.component';
-import { FindByInstrumentComponent } from './components/find-by-instrument/find-by-instrument.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { FindByInstrumentComponent } from './components/find-by-product/find-by-instrument.component';
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddAlunoComponent,
-    AlunosListComponent,
-    AlunosEditComponent,
+    AddUserComponent,
+    UserListComponent,
+    UserEditComponent,
     FindByInstrumentComponent,
     AddProdutoComponent,
     ListProdutosComponent,

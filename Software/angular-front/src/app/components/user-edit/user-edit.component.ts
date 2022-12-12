@@ -3,11 +3,11 @@ import { EscolaService } from 'src/app/services/escola.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-alunos-edit',
-  templateUrl: './alunos-edit.component.html',
-  styleUrls: ['./alunos-edit.component.css']
+  selector: 'app-user-edit',
+  templateUrl: './user-edit.component.html',
+  styleUrls: ['./user-edit.component.css']
 })
-export class AlunosEditComponent implements OnInit {
+export class UserEditComponent implements OnInit {
 
 
   baseUrl = 'http://localhost:8080/api/tutorials';

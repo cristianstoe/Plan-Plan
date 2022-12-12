@@ -3,11 +3,11 @@ import { EscolaService } from 'src/app/services/escola.service';
 
 
 @Component({
-  selector: 'app-alunos-list',
-  templateUrl: './alunos-list.component.html',
-  styleUrls: ['./alunos-list.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class AlunosListComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
   baseUrl = 'http://localhost:8080/api/tutorials';
   alunos: any;
