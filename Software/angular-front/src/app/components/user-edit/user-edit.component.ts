@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { UserService } from 'src/app/services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -12,33 +12,33 @@ export class UserEditComponent implements OnInit {
 
   baseUrl = 'http://localhost:8080/api/tutorials';
 
-  alunos: any;
-  currentAluno = null;
+  users: any;
+  currentUser = null;
   message = '';
   novaMensalidade = null;
-  newAluno = null;
+  newUser = null;
   currentIndex = -1;
 
   constructor(
-    private escolaService: EscolaService,
+    private userService: UserService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     this.message = '';
-    this.retrieveAlunos()
+    this.retrieveUsers()
   }
 
-  setActiveAluno(aluno, index): void {
-    this.currentAluno = aluno;
+  setActiveUser(user, index): void {
+    this.currentUser = user;
     this.currentIndex = index;
   }
 
-  retrieveAlunos(): void {
-    this.escolaService.getAll(this.baseUrl)
+  retrieveUsers(): void {
+    this.userService.getAll(this.baseUrl)
       .subscribe(
         data => {
-          this.alunos = data;
+          this.users = data;
           console.log(data);
         },
         error => {
@@ -46,13 +46,13 @@ export class UserEditComponent implements OnInit {
         });
   }
 
-  updateAluno(): void {
-    this.newAluno = {
-      ...this.currentAluno,
+  updateUser(): void {
+    this.newUser = {
+      ...this.currentUser,
       mensalidade: this.novaMensalidade,
     }
 
-    this.escolaService.update(this.currentAluno.cpf, this.newAluno, this.baseUrl)
+    this.userService.update(this.currentUser.cpf, this.newUser, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

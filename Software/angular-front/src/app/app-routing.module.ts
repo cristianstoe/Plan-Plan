@@ -8,8 +8,8 @@ import { AddProdutoComponent } from './components/add-produto/add-produto.compon
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'alunos', pathMatch: 'full' },
-  { path: 'alunos', component: UserListComponent },
+  { path: '', redirectTo: 'users', pathMatch: 'full' },
+  { path: 'users', component: UserListComponent },
   { path: 'produtos', component: ListProdutosComponent },
   { path: 'editar', component: UserEditComponent },
   { path: 'add', component: AddUserComponent },

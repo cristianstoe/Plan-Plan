@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -10,21 +10,21 @@ import { EscolaService } from 'src/app/services/escola.service';
 export class UserListComponent implements OnInit {
 
   baseUrl = 'http://localhost:8080/api/tutorials';
-  alunos: any;
-  currentAluno = null;
+  users: any;
+  currentUser = null;
   currentIndex = -1;
 
-  constructor(private escolaService: EscolaService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.retrieveAlunos();
+    this.retrieveUsers();
   }
 
-  retrieveAlunos(): void {
-    this.escolaService.getAll(this.baseUrl)
+  retrieveUsers(): void {
+    this.userService.getAll(this.baseUrl)
       .subscribe(
         data => {
-          this.alunos = data;
+          this.users = data;
           console.log(data);
         },
         error => {
@@ -32,8 +32,8 @@ export class UserListComponent implements OnInit {
         });
   }
 
-  setActiveAluno(aluno, index): void {
-    this.currentAluno = aluno;
+  setActiveUser(user, index): void {
+    this.currentUser = user;
     this.currentIndex = index;
   }
 

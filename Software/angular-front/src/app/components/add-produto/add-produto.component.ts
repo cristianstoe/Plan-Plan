@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class AddProdutoComponent implements OnInit {
 
   epoca = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" ]
 
-  constructor(private escolaService: EscolaService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -34,7 +34,7 @@ export class AddProdutoComponent implements OnInit {
       epoca: this.produto.epoca
     };
 
-    this.escolaService.create(data, this.baseUrl)
+    this.userService.create(data, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

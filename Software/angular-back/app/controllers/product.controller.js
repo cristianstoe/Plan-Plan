@@ -66,10 +66,10 @@ exports.findAll = (req, res) => {
 // };
 
 exports.findOne = (req, res) => {
-  const instrumento = req.query.instrument
+  const produto = req.query.instrument
 
-  console.log(instrumento)
-  Product.find({ instrumento: instrumento })
+  console.log(produto)
+  Product.find({ produto: produto })
     .then(data => {
       if (!data)
         res.status(404).send({ message: "Not found Product with id " });

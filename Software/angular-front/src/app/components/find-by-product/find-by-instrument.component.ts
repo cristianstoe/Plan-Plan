@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-find-by-instrument',
@@ -9,22 +9,22 @@ import { EscolaService } from 'src/app/services/escola.service';
 export class FindByInstrumentComponent implements OnInit {
 
   base_url = 'http://localhost:8080/api/tutorials';
-  instrumentos = ["Alface"]
+  produto = ["Alface"]
 
-  currentAluno = null;
-  currentInstrumento = null;
+  currentUser = null;
+  currentProduto = null;
   produtos: any;
   currentIndex = -1;
 
-  constructor(private escolaService: EscolaService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
-  onSelectInstrument(value: string) {
-    this.currentInstrumento = value;
+  onSelectProduto(value: string) {
+    this.currentProduto = value;
 
-    this.escolaService.findByInstrument(value, this.base_url).subscribe(
+    this.userService.findByProduto(value, this.base_url).subscribe(
       data => {
         console.log(data);
         this.produtos = data;
@@ -35,8 +35,8 @@ export class FindByInstrumentComponent implements OnInit {
     );
   }
 
-  setActiveAluno(aluno, index): void {
-    this.currentAluno = aluno;
+  setActiveUser(user, index): void {
+    this.currentUser = user;
     this.currentIndex = index;
   }
 }

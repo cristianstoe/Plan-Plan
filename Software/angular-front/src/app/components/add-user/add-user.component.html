@@ -6,7 +6,7 @@
           <input
             id="description"
             required
-            [(ngModel)]="aluno.nome"
+            [(ngModel)]="user.nome"
             name="description"
           />
         </div>
@@ -17,7 +17,7 @@
             type="text"
             id="title"
             required
-            [(ngModel)]="aluno.cpf"
+            [(ngModel)]="user.cpf"
             name="title"
           />
         </div>
@@ -27,7 +27,7 @@
           <label for="description">Privilégio</label>
 
           <select (change)= "onSelectInstrument($event.target.value)" >
-            <option *ngFor = "let i of instrumentos" > {{i}} </option >
+            <option *ngFor = "let i of produtos" > {{i}} </option >
           </select>
         </div>
 

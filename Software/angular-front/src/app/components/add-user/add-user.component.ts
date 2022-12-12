@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -10,28 +10,28 @@ import { EscolaService } from 'src/app/services/escola.service';
 export class AddUserComponent implements OnInit {
 
   baseUrl = 'http://localhost:8080/api/tutorials';
-  aluno = {
+  user = {
     cpf: '',
     nome: '',
     privilegio: 'produtor',
   };
   submitted = false;
 
-  instrumentos = ["produtor", "administrador"]
+  privilegio = ["produtor", "administrador"]
 
-  constructor(private escolaService: EscolaService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
   saveTutorial(): void {
     const data = {
-      cpf: this.aluno.cpf,
-      nome: this.aluno.nome,
-      privilegio: this.aluno.privilegio
+      cpf: this.user.cpf,
+      nome: this.user.nome,
+      privilegio: this.user.privilegio
     };
 
-    this.escolaService.create(data, this.baseUrl)
+    this.userService.create(data, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);
@@ -43,7 +43,7 @@ export class AddUserComponent implements OnInit {
   }
 
   onSelectInstrument(value: string) {
-    this.aluno.privilegio = value;
+    this.user.privilegio = value;
   }
 
 }
