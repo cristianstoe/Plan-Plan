@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
   // Create a Plantio
   const plantio = new Plantio({
-    produtoId: req.body.productId,
+    produtoId: req.body.produtoId,
     userId: req.body.userId,
     quantidade: req.body.quantidade,
     data_plantio: req.body.data_plantio,

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="list">
+    <h4>Listagem de Plantio</h4>
+    <ul class="student-list">
+      <li
+        *ngFor="let plantio of plantios; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveProduto(plantio, i)"
+      >
+        {{ plantio.id }}
+      </li>
+    </ul>
+  </div>
+  <div class="current-student">
+    <div *ngIf="currentPlantio">
+      <h4>Produto</h4>
+      <div>
+        <label><strong>Produto:</strong></label> {{ currentProduto.produtoId }}
+      </div>
+      <div>
+        <label><strong>Usuário:</strong></label>
+        {{ currentProduto.userId }}
+      </div>
+      <div>
+        <label><strong>Quantidade:</strong></label>
+        {{ currentProduto.quantidade }}
+      </div>
+      <div>
+        <label><strong>Data Plantio:</strong></label>
+        {{ currentProduto.data_plantio }}
+      </div>
+    </div>
+
+    <div *ngIf="!currentPlantio">
+      <br />
+      <p>Clique em um produto...</p>
+    </div>
+  </div>
+</div>

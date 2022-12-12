@@ -7,11 +7,13 @@ import { FindByInstrumentComponent } from './components/find-by-product/find-by-
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 import { AddPlantioComponent } from './components/add-plantio/add-plantio.component';
+import { ListPlantioComponent } from './components/list-plantio/list-plantio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
   { path: 'users', component: UserListComponent },
   { path: 'produtos', component: ListProdutosComponent },
+  { path: 'plantios', component: ListPlantioComponent },
   { path: 'editar', component: UserEditComponent },
   { path: 'add', component: AddUserComponent },
   { path: 'add-produto', component: AddProdutoComponent},
