@@ -3,7 +3,7 @@ module.exports = app => {
 
   var router = require("express").Router();
 
-  // Create a new Tutorial
+  // Create a new Products
   router.post("/", products.create);
 
   // Retrieve all products
@@ -12,16 +12,16 @@ module.exports = app => {
   // Retrieve all published products
   router.get("/published", products.findAllPublished);
 
-  // Retrieve a single Tutorial with id
+  // Retrieve a single Products with id
   router.get("/:id", products.findOne);
 
-  // Update a Tutorial with id
+  // Update a Products with id
   router.put("/:id", products.update);
 
-  // Delete a Tutorial with id
+  // Delete a Products with id
   router.delete("/:id", products.delete);
 
-  // Create a new Tutorial
+  // Create a new Products
   router.delete("/", products.deleteAll);
 
   app.use("/api/products", router);
