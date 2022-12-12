@@ -6,6 +6,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { FindByInstrumentComponent } from './components/find-by-product/find-by-instrument.component';
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
+import { AddPlantioComponent } from './components/add-plantio/add-plantio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'editar', component: UserEditComponent },
   { path: 'add', component: AddUserComponent },
   { path: 'add-produto', component: AddProdutoComponent},
+  { path: 'add-plantio', component: AddPlantioComponent},
   { path: 'findBy', component: FindByInstrumentComponent}
 ];
 

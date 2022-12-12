@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AddUserComponent implements OnInit {
 
-  baseUrl = 'http://localhost:8080/api/tutorials';
+  baseUrl = 'http://localhost:8080/api/users';
   user = {
     cpf: '',
     nome: '',
@@ -19,19 +19,19 @@ export class AddUserComponent implements OnInit {
 
   privilegio = ["produtor", "administrador"]
 
-  constructor(private userService: UserService) { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
   }
 
-  saveTutorial(): void {
+  saveUser(): void {
     const data = {
       cpf: this.user.cpf,
       nome: this.user.nome,
       privilegio: this.user.privilegio
     };
 
-    this.userService.create(data, this.baseUrl)
+    this.mainService.create(data, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

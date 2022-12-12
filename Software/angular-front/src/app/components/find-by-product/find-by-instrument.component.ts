@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-find-by-instrument',
@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class FindByInstrumentComponent implements OnInit {
 
-  base_url = 'http://localhost:8080/api/tutorials';
+  base_url = 'http://localhost:8080/api/users';
   produto = ["Alface"]
 
   currentUser = null;
@@ -16,7 +16,7 @@ export class FindByInstrumentComponent implements OnInit {
   produtos: any;
   currentIndex = -1;
 
-  constructor(private userService: UserService) { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +24,7 @@ export class FindByInstrumentComponent implements OnInit {
   onSelectProduto(value: string) {
     this.currentProduto = value;
 
-    this.userService.findByProduto(value, this.base_url).subscribe(
+    this.mainService.findByProduto(value, this.base_url).subscribe(
       data => {
         console.log(data);
         this.produtos = data;

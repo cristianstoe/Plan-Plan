@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
@@ -21,12 +21,12 @@ export class AddProdutoComponent implements OnInit {
 
   epoca = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro" ]
 
-  constructor(private userService: UserService) { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
   }
 
-  saveTutorial(): void {
+  saveProduto(): void {
     const data = {
       id: this.produto.id,
       nome: this.produto.nome,
@@ -34,7 +34,7 @@ export class AddProdutoComponent implements OnInit {
       epoca: this.produto.epoca
     };
 
-    this.userService.create(data, this.baseUrl)
+    this.mainService.create(data, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

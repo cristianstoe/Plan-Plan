@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserEditComponent implements OnInit {
 
 
-  baseUrl = 'http://localhost:8080/api/tutorials';
+  baseUrl = 'http://localhost:8080/api/users';
 
   users: any;
   currentUser = null;
@@ -20,7 +20,7 @@ export class UserEditComponent implements OnInit {
   currentIndex = -1;
 
   constructor(
-    private userService: UserService,
+    private mainService: MainService,
     private route: ActivatedRoute,
     private router: Router) { }
 
@@ -35,7 +35,7 @@ export class UserEditComponent implements OnInit {
   }
 
   retrieveUsers(): void {
-    this.userService.getAll(this.baseUrl)
+    this.mainService.getAll(this.baseUrl)
       .subscribe(
         data => {
           this.users = data;
@@ -52,7 +52,7 @@ export class UserEditComponent implements OnInit {
       mensalidade: this.novaMensalidade,
     }
 
-    this.userService.update(this.currentUser.cpf, this.newUser, this.baseUrl)
+    this.mainService.update(this.currentUser.cpf, this.newUser, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

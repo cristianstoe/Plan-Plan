@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
@@ -14,14 +14,14 @@ export class ListProdutosComponent implements OnInit {
   currentProduto = null;
   currentIndex = -1;
 
-  constructor(private userService: UserService) { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
     this.retrieveProdutos();
   }
 
   retrieveProdutos(): void {
-    this.userService.getAll(this.baseUrl)
+    this.mainService.getAll(this.baseUrl)
       .subscribe(
         data => {
           this.produtos = data;

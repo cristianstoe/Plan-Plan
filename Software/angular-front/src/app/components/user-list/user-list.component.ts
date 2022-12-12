@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
@@ -9,19 +9,19 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  baseUrl = 'http://localhost:8080/api/tutorials';
+  baseUrl = 'http://localhost:8080/api/users';
   users: any;
   currentUser = null;
   currentIndex = -1;
 
-  constructor(private userService: UserService) { }
+  constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
     this.retrieveUsers();
   }
 
   retrieveUsers(): void {
-    this.userService.getAll(this.baseUrl)
+    this.mainService.getAll(this.baseUrl)
       .subscribe(
         data => {
           this.users = data;

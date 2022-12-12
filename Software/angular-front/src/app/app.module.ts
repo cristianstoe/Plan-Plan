@@ -11,6 +11,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { FindByInstrumentComponent } from './components/find-by-product/find-by-instrument.component';
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
+import { AddPlantioComponent } from './components/add-plantio/add-plantio.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ListProdutosComponent } from './components/list-produtos/list-produtos.
     FindByInstrumentComponent,
     AddProdutoComponent,
     ListProdutosComponent,
+    AddPlantioComponent,
   ],
   imports: [
     BrowserModule,
