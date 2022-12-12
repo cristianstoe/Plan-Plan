@@ -44,10 +44,9 @@
 }
 
 .buttonSend:hover {
-    width: 130px;
+    width: 126px;
     height: 45px;
-    border-radius: 30px;
-    background-color: #97f76b;
-    color: #458695;
+    background-color: #ffffff;
+    color: #78D150;
     cursor: pointer;
 }
