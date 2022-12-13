@@ -1,43 +1,42 @@
-<div>
+<div style="width: 400px; margin: auto; padding-top: 1rem">
+  <div class="divFindProduct">
     <h2>Selecione um Produto</h2>
-    <select (change)= "onSelectProduto($event.target.value)" >
-        <option *ngFor = "let i of produto" > {{i}} </option >
+    <select (change)="onSelectProduto($event.target.value)">
+      <option *ngFor="let i of produto"> {{i}} </option>
     </select>
 
     <div *ngIf="currentProduto">
-        <h4>Listagem Usuários pelo Produto Selecionado</h4>
-        <ul class="student-list">
-            <li
-                *ngFor="let user of produtos; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveUser(user, i)"
-            >
-                {{ user.nome }}
-            </li>
-        </ul>
+      <h4>Listagem Usuários pelo Produto Selecionado</h4>
+      <ul class="student-list">
+        <li *ngFor="let user of produtos; let i = index" [class.active]="i == currentIndex"
+          (click)="setActiveUser(user, i)">
+          {{ user.nome }}
+        </li>
+      </ul>
 
-        <p>Clique em um user para ver mais informações</p>
+      <p>Clique em um user para ver mais informações</p>
     </div>
 
     <div class="current-student">
-        <div *ngIf="currentUser">
-          <h4>User</h4>
-          <div>
-            <label><strong>Nome:</strong></label> {{ currentUser.nome }}
-          </div>
-          <div>
-            <label><strong>CPF:</strong></label>
-            {{ currentUser.cpf }}
-          </div>
-          <div>
-            <label><strong>Produto:</strong></label>
-            {{ currentUser.produto }}
-          </div>
-          <div>
-            <label><strong>Mensalidade:</strong></label>
-            {{ currentUser.mensalidade }}
-          </div>
+      <div *ngIf="currentUser">
+        <h4>User</h4>
+        <div>
+          <label><strong>Nome:</strong></label> {{ currentUser.nome }}
         </div>
-
+        <div>
+          <label><strong>CPF:</strong></label>
+          {{ currentUser.cpf }}
+        </div>
+        <div>
+          <label><strong>Produto:</strong></label>
+          {{ currentUser.produto }}
+        </div>
+        <div>
+          <label><strong>Mensalidade:</strong></label>
+          {{ currentUser.mensalidade }}
+        </div>
       </div>
+
+    </div>
+  </div>
 </div>
