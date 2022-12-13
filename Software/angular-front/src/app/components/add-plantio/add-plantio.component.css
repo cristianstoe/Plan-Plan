@@ -1,7 +1,57 @@
 .group {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
+}
 
-  .group label {
-    margin-right: 1rem;
-  }
+.group label {
+  margin-right: 1rem;
+}
+
+.divPlant {
+  color: white;
+  margin: 60px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.divSelectProduct select {
+  margin-top: 20px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 8px;
+  width: 250px;
+  height: 30px;
+  background-color: #5AB883;
+}
+
+.divSelectUser select {
+  margin-top: 20px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 8px;
+  width: 250px;
+  height: 30px;
+  background-color: #5AB883;
+}
+
+.divQuantity input {
+  margin-top: 20px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 8px;
+  background-color: #5AB883;
+  width: 250px;
+  height: 30px;
+}
+
+.buttonSend {
+  width: 126px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #78D150;
+  color: white;
+  margin-top: 20px;
+}
+
+.buttonSend:hover {
+  width: 126px;
+  height: 45px;
+  background-color: #ffffff;
+  color: #78D150;
+  cursor: pointer;
+}
