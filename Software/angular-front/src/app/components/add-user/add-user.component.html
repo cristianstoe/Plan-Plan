@@ -1,29 +1,31 @@
 <div style="width: 400px; margin: auto; padding-top: 1rem">
-    <div>
+    <div class="divUser">
       <div *ngIf="!submitted">
         <div class="group">
           <label for="description">Nome</label>
-          <input
+          <input class="inputAddUser"
             id="description"
             required
             [(ngModel)]="user.nome"
             name="description"
+            placeholder="  Ensira o seu nome"
           />
         </div>
 
-        <div class="group">
-          <label for="title">CPF</label>
-          <input
+        <div class="group divCPF">
+          <label for="title">CPF </label>
+          <input class="inputAddUser"
             type="text"
             id="title"
             required
             [(ngModel)]="user.cpf"
             name="title"
+            placeholder="   CPF"
           />
         </div>
 
 
-        <div class="group">
+        <div class="group divPrivilegio">
           <label for="description">Privilégio</label>
 
           <select (change)= "onSelectInstrument($event.target.value)" >
@@ -31,7 +33,7 @@
           </select>
         </div>
 
-        <button (click)="saveUser()">Enviar</button>
+        <button class="buttonSend" (click)="saveUser()">Enviar</button>
       </div>
 
       <div *ngIf="submitted">

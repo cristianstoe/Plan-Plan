@@ -1,7 +1,8 @@
 <div style="width: 400px; margin: auto; padding-top: 1rem">
-    <div>
+    <div class="divPlant">
       <div *ngIf="!submitted">
-        <div class="group">
+
+        <div class="group divSelectProduct">
           <label for="description">Produto</label>
           <select (change)= "onSelectProduct($event.target.value)" >
             <option *ngFor = "let i of products" > {{i.nome}} </option >
@@ -9,7 +10,7 @@
         </div>
 
 
-        <div class="group">
+        <div class="group divSelectUser">
           <label for="description">Usuario</label>
 
           <select (change)= "onSelectUser($event.target.value)" >
@@ -17,7 +18,7 @@
           </select>
         </div>
 
-        <div class="group">
+        <div class="group divQuantity">
           <label for="description">Quantidade</label>
           <input
             id="description"
@@ -28,7 +29,7 @@
           />
         </div>
 
-        <button (click)="savePlantio()">Enviar</button>
+        <button class="buttonSend" (click)="savePlantio()">Enviar</button>
       </div>
 
       <div *ngIf="submitted">
