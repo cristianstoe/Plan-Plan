@@ -17,6 +17,9 @@ exports.create = (req, res) => {
     data_plantio: req.body.data_plantio,
   });
 
+  console.log(req.body);
+  console.log(plantio);
+
   // Save Plantio in the database
   plantio
     .save(plantio)

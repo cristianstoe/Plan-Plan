@@ -15,6 +15,8 @@ module.exports = mongoose => {
     return object;
   });
 
+  console.log("schema: ", schema);
+
   const Plantios = mongoose.model("plantios", schema, "plantios");
   return Plantios;
 };

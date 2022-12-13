@@ -4,39 +4,63 @@ import { MainService } from 'src/app/services/main.service';
 @Component({
   selector: 'app-find-by-instrument',
   templateUrl: './find-by-instrument.component.html',
-  styleUrls: ['./find-by-instrument.component.css']
+  styleUrls: ['./find-by-instrument.component.css'],
 })
 export class FindByInstrumentComponent implements OnInit {
-
-  base_url = 'http://localhost:8080/api/users';
-  produto = ["Alface"]
+  base_url = 'http://localhost:8080/api/products';
+  plantioUrl = 'http://localhost:8080/api/plantio';
 
   currentUser = null;
-  currentProduto = null;
+  currentPlantio = null;
+  plantios = null;
   produtos: any;
   currentIndex = -1;
+  filteredPlantios = null;
 
-  constructor(private mainService: MainService) { }
+  constructor(private mainService: MainService) {}
 
   ngOnInit(): void {
+    this.retrieveProducts();
+    this.retrieveUsers();
+    console.log(this.plantios);
+    console.log(this.produtos);
   }
 
   onSelectProduto(value: string) {
-    this.currentProduto = value;
+    this.filteredPlantios = this.plantios.filter(
+      (plantio) => plantio.produtoId === value
+    );
 
-    this.mainService.findByProduto(value, this.base_url).subscribe(
-      data => {
+    console.log(value);
+  }
+
+  retrieveUsers(): void {
+    this.mainService.getAll(this.plantioUrl).subscribe(
+      (data) => {
+        this.plantios = data;
+
         console.log(data);
-        this.produtos = data;
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
   }
 
-  setActiveUser(user, index): void {
-    this.currentUser = user;
+  retrieveProducts(): void {
+    this.mainService.getAll(this.base_url).subscribe(
+      (data) => {
+        this.produtos = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  setActivePlantio(plantio, index): void {
+    this.currentPlantio = plantio;
     this.currentIndex = index;
   }
 }

@@ -2,38 +2,35 @@
   <div class="divFindProduct">
     <h2>Selecione um Produto</h2>
     <select (change)="onSelectProduto($event.target.value)">
-      <option *ngFor="let i of produto"> {{i}} </option>
+      <option *ngFor="let i of produtos"> {{i.nome}} </option>
     </select>
 
-    <div *ngIf="currentProduto">
-      <h4>Listagem Usuários pelo Produto Selecionado</h4>
+    <div *ngIf="filteredPlantios">
+      <h4>Listagem de Plantios com o Produto selecionado</h4>
       <ul class="student-list">
-        <li *ngFor="let user of produtos; let i = index" [class.active]="i == currentIndex"
-          (click)="setActiveUser(user, i)">
-          {{ user.nome }}
+        <li *ngFor="let plantio of filteredPlantios; let i = index" [class.active]="i == currentIndex" (click)="setActivePlantio(plantio, i)">
+          {{ plantio.userId }} - {{ plantio.produtoId }}
         </li>
       </ul>
-
-      <p>Clique em um user para ver mais informações</p>
     </div>
 
     <div class="current-student">
-      <div *ngIf="currentUser">
+      <div *ngIf="currentPlantio">
         <h4>User</h4>
         <div>
-          <label><strong>Nome:</strong></label> {{ currentUser.nome }}
+          <label><strong>Nome:</strong></label> {{ currentPlantio.userId }}
         </div>
         <div>
           <label><strong>CPF:</strong></label>
-          {{ currentUser.cpf }}
+          {{ currentPlantio.produtoId }}
         </div>
         <div>
           <label><strong>Produto:</strong></label>
-          {{ currentUser.produto }}
+          {{ currentPlantio.quantidade }}
         </div>
         <div>
           <label><strong>Mensalidade:</strong></label>
-          {{ currentUser.mensalidade }}
+          {{ currentPlantio.data_plantio }}
         </div>
       </div>
 

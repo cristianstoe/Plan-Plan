@@ -1,0 +1,828 @@
+{
+  "id": "f6857b78-55d8-4f48-8445-0818b6b6fd6e",
+  "version": "2.0",
+  "name": "plan_plan",
+  "url": "http://localhost:8081/",
+  "tests": [{
+    "id": "29b32e59-28c8-4b0f-bdb7-2d6cf73badba",
+    "name": "Add User",
+    "commands": [{
+      "id": "b679deab-62cf-4010-9e27-e2e1da668524",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8081/users",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fea7b510-e2d6-4ab2-a3f3-53f74894ea26",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f52ea847-05e4-4d46-abb7-26b4e342b300",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Usuários",
+      "targets": [
+        ["linkText=Cadastrar Usuários", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Usuários')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Usuários')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9104ec01-6997-40ff-9370-195d542528f4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Cadastrar Usuários",
+      "targets": [
+        ["linkText=Cadastrar Usuários", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Usuários')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Usuários')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d9c6113-906e-4e97-bb56-7a288b93b422",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Cadastrar Usuários",
+      "targets": [
+        ["linkText=Cadastrar Usuários", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Usuários')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Usuários')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4670c9-13ac-4df1-83f4-801b3ad13158",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6551919a-0f23-4feb-988f-de41a3276eac",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Usuario 1"
+    }, {
+      "id": "437aa8c8-c6bd-4b73-a9a6-418f7936a7ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678901"
+    }, {
+      "id": "4db59a90-4c8a-4533-b0ef-0fd519693735",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmButton",
+      "targets": [
+        ["id=confirmButton", "id"],
+        ["css=#confirmButton", "css:finder"],
+        ["xpath=//button[@id='confirmButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2ff0c43-4089-4f9b-b202-59bcb0c7f985",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voltar",
+      "targets": [
+        ["linkText=Voltar", "linkText"],
+        ["css=.divUser a", "css:finder"],
+        ["xpath=//a[contains(text(),'Voltar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voltar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45a97ea1-204a-4414-9db6-0542f5554cd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Usuários",
+      "targets": [
+        ["linkText=Cadastrar Usuários", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Usuários')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Usuários')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c819c6c-db06-41d2-8a5a-0dcae3d9d20d",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12820ecf-8ad2-4a09-ab74-3ac124303223",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Usuario 2"
+    }, {
+      "id": "22b02bc1-d765-4418-80e0-8aabc744dd39",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "09876543210"
+    }, {
+      "id": "6a48dbf8-9a32-4238-b49b-37f4adb528bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=select",
+      "targets": [
+        ["css=select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e64b1de-2182-4927-a954-1cc9329dda35",
+      "comment": "",
+      "command": "select",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=administrador"
+    }, {
+      "id": "c8b96680-120d-40cf-9bbb-a5081e5e1dbd",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmButton",
+      "targets": [
+        ["id=confirmButton", "id"],
+        ["css=#confirmButton", "css:finder"],
+        ["xpath=//button[@id='confirmButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c244d0db-5925-47e2-85bf-dfa0ca05e94d",
+    "name": "Add Product",
+    "commands": [{
+      "id": "ec6d0128-5943-4655-a92f-88998110d54c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8081/users",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1564abdd-1489-49e1-b22d-418e1f132ef7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e946929-43b4-46a3-907a-252910ff23e4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Produto",
+      "targets": [
+        ["linkText=Cadastrar Produto", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Produto')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-produto')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de1e1be-916e-48f4-9dfd-c1d622f6f6fc",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c7e50c5-247b-459c-b641-e298d55d63b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Produto 1"
+    }, {
+      "id": "025dcc9e-2dd3-4fd0-8029-6bae47fa8d9b",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3.5,1"
+    }, {
+      "id": "bd486573-0db5-4911-9ee9-c9275bc84008",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3.5,1"
+    }, {
+      "id": "ce477b74-0b25-4123-bf2f-d1774e7052d3",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "3.5,1"
+    }, {
+      "id": "6904cca0-882c-475a-ba02-7a099efb2d21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3de307f5-e1e7-481a-b4c6-fe4a59e3b0cc",
+      "comment": "",
+      "command": "type",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "b0769065-8a6a-4aa8-8259-d4ca527b3943",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonSend",
+      "targets": [
+        ["css=.buttonSend", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7469d66e-e83c-42b9-ada2-243dc28a87ac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voltar",
+      "targets": [
+        ["linkText=Voltar", "linkText"],
+        ["css=.divProduct a", "css:finder"],
+        ["xpath=//a[contains(text(),'Voltar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voltar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cceaa2b-ae0d-4e17-94cf-566816f7db8e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Produto",
+      "targets": [
+        ["linkText=Cadastrar Produto", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Produto')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-produto')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "576011e5-8c60-4ff1-a0d8-6888a19263ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34b8fa87-d282-4ec6-a7f7-a548f6b28e2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Produto 2"
+    }, {
+      "id": "bdb3c324-e983-45a9-b9e5-dc95c65082ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=select",
+      "targets": [
+        ["css=select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e649bb79-6bb2-4f42-be83-e4ec5650a353",
+      "comment": "",
+      "command": "select",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=maio"
+    }, {
+      "id": "729f0fc3-8463-4b41-b570-3e5c0369a5e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6be8dd68-4c68-4057-9bf3-278b6835cb3e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "95"
+    }, {
+      "id": "cc023f75-19a5-4a6a-833d-c8f68dcf70e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonSend",
+      "targets": [
+        ["css=.buttonSend", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cec507ee-82b5-4728-9ecb-b2d8c2b8c005",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voltar",
+      "targets": [
+        ["linkText=Voltar", "linkText"],
+        ["css=.divProduct a", "css:finder"],
+        ["xpath=//a[contains(text(),'Voltar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voltar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dc21575-a02d-44dd-9b26-d64b525b896d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Produto",
+      "targets": [
+        ["linkText=Cadastrar Produto", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Produto')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-produto')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Produto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0c05c8a-4faf-4f3e-a85b-d5444fba8382",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f04467f0-3de4-49e8-9b0d-b402f4532801",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(1) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Produto 3"
+    }, {
+      "id": "cf7a9507-10f6-401c-83eb-c11bd32823bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=select",
+      "targets": [
+        ["css=select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afe64d03-80dc-4a78-8bf1-df0381b7a216",
+      "comment": "",
+      "command": "select",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=outubro"
+    }, {
+      "id": "bcf9a0c7-d2dd-48e4-b577-42b2f01ae9d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "859ccd1b-3ccd-47a2-89dc-610298e58f2f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.divTime > #description",
+      "targets": [
+        ["css=.divTime > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "a08e5f06-7003-4d6a-9c55-f5b4767f0c3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonSend",
+      "targets": [
+        ["css=.buttonSend", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1deb1f2d-d9ef-4057-9b68-e06af97a70f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0e6366a3-ebad-48e8-aae2-4638eae760cf",
+    "name": "Add Plant",
+    "commands": [{
+      "id": "09a5871a-b42d-4f11-9798-3e354c6749b0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8081/users",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf14ae05-7446-4842-8461-eecd289229b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "945x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e895a7d-c258-43a2-a550-60c548d6ff61",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Plantio",
+      "targets": [
+        ["linkText=Cadastrar Plantio", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Plantio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-plantio')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Plantio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fb9f663-a12b-460a-87e6-bfaffa287ac0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divSelectProduct > select",
+      "targets": [
+        ["css=.divSelectProduct > select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba729f43-d7d2-4ab3-b6c3-73b8f0f01281",
+      "comment": "",
+      "command": "select",
+      "target": "css=.divSelectProduct > select",
+      "targets": [],
+      "value": "label=Produto 1"
+    }, {
+      "id": "46e491ea-66d9-480a-9d5a-139338faeaec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divSelectUser > select",
+      "targets": [
+        ["css=.divSelectUser > select", "css:finder"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e95d2cc1-bd08-4d45-afc9-7c48e7e43a28",
+      "comment": "",
+      "command": "select",
+      "target": "css=.divSelectUser > select",
+      "targets": [],
+      "value": "label=Usuario 2"
+    }, {
+      "id": "b07a9e5c-fd47-4045-ae41-f0651ac649de",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(3) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28bbe046-6b7e-493b-858d-116841fa0828",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(3) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "9fd9d30d-db3c-413a-90a3-66277153c11b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.group:nth-child(4) > #description",
+      "targets": [
+        ["css=.group:nth-child(4) > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c588b9af-9253-4156-ab13-19eb018df050",
+      "comment": "",
+      "command": "type",
+      "target": "css=.group:nth-child(4) > #description",
+      "targets": [
+        ["css=.group:nth-child(4) > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2022-12-16"
+    }, {
+      "id": "fb937a7f-f67c-4229-b1f3-67693521ac8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonSend",
+      "targets": [
+        ["css=.buttonSend", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c056d19-c6e4-4f4b-a076-3c70c2c979a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Plantio",
+      "targets": [
+        ["linkText=Cadastrar Plantio", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Plantio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-plantio')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Plantio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f80c7de7-c992-4964-9cd0-af0b35c3e7b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voltar",
+      "targets": [
+        ["linkText=Voltar", "linkText"],
+        ["css=.divPlant a", "css:finder"],
+        ["xpath=//a[contains(text(),'Voltar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voltar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "033ee8d8-9256-4503-8db0-37f18f4c46f8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Plantio",
+      "targets": [
+        ["linkText=Cadastrar Plantio", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cadastrar Plantio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add-plantio')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Plantio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52160ac3-d154-4a2f-ab31-032889932726",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divSelectProduct > select",
+      "targets": [
+        ["css=.divSelectProduct > select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e6a33fe-0bb5-4ac0-9085-fb43f57e48fd",
+      "comment": "",
+      "command": "select",
+      "target": "css=.divSelectProduct > select",
+      "targets": [],
+      "value": "label=Produto 2"
+    }, {
+      "id": "a9314833-ab5a-4299-b17d-2b21c8818f46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.divSelectUser > select",
+      "targets": [
+        ["css=.divSelectUser > select", "css:finder"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b467521-af0d-485c-8404-59b3e824cc63",
+      "comment": "",
+      "command": "select",
+      "target": "css=.divSelectUser > select",
+      "targets": [],
+      "value": "label=Usuario 2"
+    }, {
+      "id": "1058fa28-bffd-4741-9da7-1885f07c319e",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(3) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef03503e-935b-4ed3-8574-c6caf4854a46",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=.group:nth-child(3) > #description", "css:finder"],
+        ["xpath=//input[@id='description']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "70"
+    }, {
+      "id": "5afc36dd-4eff-408b-8a4c-0f9e73cd754c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.group:nth-child(4) > #description",
+      "targets": [
+        ["css=.group:nth-child(4) > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9f7ed55-df88-4d3a-bdcf-9152d1459f68",
+      "comment": "",
+      "command": "type",
+      "target": "css=.group:nth-child(4) > #description",
+      "targets": [
+        ["css=.group:nth-child(4) > #description", "css:finder"],
+        ["xpath=(//input[@id='description'])[2]", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2022-12-30"
+    }, {
+      "id": "dc9cfb41-c4fb-4736-9b81-85c0d69bc6f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonSend",
+      "targets": [
+        ["css=.buttonSend", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ed1444f8-1c06-43b6-8e63-5ab6e99f8ede",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["29b32e59-28c8-4b0f-bdb7-2d6cf73badba", "c244d0db-5925-47e2-85bf-dfa0ca05e94d", "0e6366a3-ebad-48e8-aae2-4638eae760cf"]
+  }],
+  "urls": ["http://localhost:8081/", "http://localhost:8081/add-produto"],
+  "plugins": []
+}
