@@ -1,44 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { EscolaService } from 'src/app/services/escola.service';
+import { MainService } from 'src/app/services/main.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-alunos-edit',
-  templateUrl: './alunos-edit.component.html',
-  styleUrls: ['./alunos-edit.component.css']
+  selector: 'app-user-edit',
+  templateUrl: './user-edit.component.html',
+  styleUrls: ['./user-edit.component.css']
 })
-export class AlunosEditComponent implements OnInit {
+export class UserEditComponent implements OnInit {
 
 
-  baseUrl = 'http://localhost:8080/api/tutorials';
+  baseUrl = 'http://localhost:8080/api/users';
 
-  alunos: any;
-  currentAluno = null;
+  users: any;
+  currentUser = null;
   message = '';
   novaMensalidade = null;
-  newAluno = null;
+  newUser = null;
   currentIndex = -1;
 
   constructor(
-    private escolaService: EscolaService,
+    private mainService: MainService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     this.message = '';
-    this.retrieveAlunos()
+    this.retrieveUsers()
   }
 
-  setActiveAluno(aluno, index): void {
-    this.currentAluno = aluno;
+  setActiveUser(user, index): void {
+    this.currentUser = user;
     this.currentIndex = index;
   }
 
-  retrieveAlunos(): void {
-    this.escolaService.getAll(this.baseUrl)
+  retrieveUsers(): void {
+    this.mainService.getAll(this.baseUrl)
       .subscribe(
         data => {
-          this.alunos = data;
+          this.users = data;
           console.log(data);
         },
         error => {
@@ -46,13 +46,13 @@ export class AlunosEditComponent implements OnInit {
         });
   }
 
-  updateAluno(): void {
-    this.newAluno = {
-      ...this.currentAluno,
+  updateUser(): void {
+    this.newUser = {
+      ...this.currentUser,
       mensalidade: this.novaMensalidade,
     }
 
-    this.escolaService.update(this.currentAluno.cpf, this.newAluno, this.baseUrl)
+    this.mainService.update(this.currentUser.cpf, this.newUser, this.baseUrl)
       .subscribe(
         response => {
           console.log(response);

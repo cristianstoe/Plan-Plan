@@ -1,0 +1,31 @@
+<div style="width: 400px; margin: auto; padding-top: 1rem">
+  <div class="divUser">
+    <div *ngIf="!submitted">
+      <div class="group">
+        <label for="description">Nome</label>
+        <input class="inputAddUser" id="description" required [(ngModel)]="user.nome" name="description" placeholder="  Ensira o seu nome" />
+      </div>
+
+      <div class="group divCPF">
+        <label for="title">CPF </label>
+        <input class="inputAddUser" type="text" id="title" required [(ngModel)]="user.cpf" name="title" placeholder="   CPF" />
+      </div>
+
+
+      <div class="group divPrivilegio">
+        <label for="description">Privilégio</label>
+
+        <select (change)="onSelectInstrument($event.target.value)">
+          <option *ngFor="let i of privilegio"> {{i}} </option>
+        </select>
+      </div>
+
+      <button id="confirmButton" class="buttonSend" (click)="saveUser()">Enviar</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Usuário criado!</h4>
+      <a href="#">Voltar</a>
+    </div>
+  </div>
+</div>

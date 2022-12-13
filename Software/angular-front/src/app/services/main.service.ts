@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class EscolaService {
+export class MainService {
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +34,7 @@ export class EscolaService {
     return this.http.delete(baseUrl);
   }
 
-  findByInstrument(instrument, baseUrl): Observable<any> {
+  findByProduto(instrument, baseUrl): Observable<any> {
     return this.http.get(`${baseUrl}/10?instrument=${instrument}`);
   }
 }

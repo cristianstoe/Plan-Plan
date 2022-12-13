@@ -3,28 +3,28 @@ import { MainService } from 'src/app/services/main.service';
 
 
 @Component({
-  selector: 'app-list-produtos',
-  templateUrl: './list-produtos.component.html',
-  styleUrls: ['./list-produtos.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class ListProdutosComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
-  baseUrl = 'http://localhost:8080/api/products';
-  produtos: any;
-  currentProduto = null;
+  baseUrl = 'http://localhost:8080/api/users';
+  users: any;
+  currentUser = null;
   currentIndex = -1;
 
   constructor(private mainService: MainService) { }
 
   ngOnInit(): void {
-    this.retrieveProdutos();
+    this.retrieveUsers();
   }
 
-  retrieveProdutos(): void {
+  retrieveUsers(): void {
     this.mainService.getAll(this.baseUrl)
       .subscribe(
         data => {
-          this.produtos = data;
+          this.users = data;
           console.log(data);
         },
         error => {
@@ -32,8 +32,8 @@ export class ListProdutosComponent implements OnInit {
         });
   }
 
-  setActiveProduto(produto, index): void {
-    this.currentProduto = produto;
+  setActiveUser(user, index): void {
+    this.currentUser = user;
     this.currentIndex = index;
   }
 

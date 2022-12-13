@@ -1,0 +1,24 @@
+.student-list li {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #c1c1c1;
+  list-style: none;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+.student-list li:hover {
+  cursor: pointer;
+}
+
+.list {
+  width: 200px;
+}
+
+.container {
+  display: flex;
+}
+
+.current-student {
+  margin-left: 2rem;
+}

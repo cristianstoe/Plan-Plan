@@ -1,28 +1,31 @@
-<div style="width: 400px; margin: auto; padding-top: 1rem">
-  <div>
+<div style="width: 400px; margin: auto; padding-top: 1rem; color: white;">
+  <div class="divProduct">
     <div *ngIf="!submitted">
       <div class="group">
         <label for="description">Nome</label>
         <input
+          class="inputProduto"
           id="description"
           required
           [(ngModel)]="produto.nome"
           name="description"
+          placeholder="  Ensira o seu nome"
         />
       </div>
 
 
-      <div class="group">
-        <label for="description">epoca</label>
+      <div class="group divPeriod">
+        <label for="description">Época</label>
 
         <select (change)= "onSelectInstrument($event.target.value)" >
           <option *ngFor = "let i of epoca" > {{i}} </option >
         </select>
       </div>
 
-      <div class="group">
-        <label for="description">tempo de colheita</label>
+      <div class="group divTime">
+        <label for="description">Tempo de colheita (dias)</label>
         <input
+          class="inputProduto"
           id="description"
           required
           [(ngModel)]="produto.tempo_colheita"
@@ -31,7 +34,7 @@
         />
       </div>
 
-      <button (click)="saveTutorial()">Enviar</button>
+      <button class="buttonSend" (click)="saveProduto()">Enviar</button>
     </div>
 
     <div *ngIf="submitted">

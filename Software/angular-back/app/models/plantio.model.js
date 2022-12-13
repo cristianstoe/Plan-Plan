@@ -1,10 +1,10 @@
 module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
-      id: String,
-      nome: String,
-      tempo_colheita: String,
-      epoca: String,
+      produtoId: String,
+      userId: String,
+      quantidade: Number,
+      data_plantio: String,
     },
     { timestamps: true }
   );
@@ -15,6 +15,8 @@ module.exports = mongoose => {
     return object;
   });
 
-  const Products = mongoose.model("products", schema, "products");
-  return Products;
+  console.log("schema: ", schema);
+
+  const Plantios = mongoose.model("plantios", schema, "plantios");
+  return Plantios;
 };
